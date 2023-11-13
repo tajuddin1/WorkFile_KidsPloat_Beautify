@@ -305,7 +305,7 @@
    <style>
       .accordion_menu {
          max-width: 260px;
-         margin: auto;
+         margin: 5px auto;
       }
       .accordion {
         background-color: #eee;
@@ -318,7 +318,7 @@
         text-align: left;
         outline: none;
         font-size: 16px;
-        margin: 5px 0;
+        margin-top: 0;
         transition: 0.6s;
       }
       .accordion:after {
@@ -1038,7 +1038,7 @@
          }
       }
       // Define an array of YouTube video IDs (replace with actual video IDs)
-       const youtubeVideoIds = {{ youtubevideos | tojson | safe }};
+      //  const youtubeVideoIds = {{ youtubevideos | tojson | safe }};
 
       // Function to create and append a YouTube video player
       function createYouTubeVideoPlayer(videoId) {
