@@ -114,7 +114,8 @@
       </div>
       <div class="container">
          <div class="image-container">
-            <img src={{ url_for('static', filename="combined_logo.gif") }} alt="logo_t"</img>
+            <!-- <img src={{ url_for('static', filename="combined_logo.gif") }} alt="logo_t"</img> -->
+            <img src="https://kidsplot.com/static/combined_logo.gif" alt="">
          </div>
          <form id="videoGenerationForm" action="/" method="POST">
             <div class="input-container">
@@ -136,7 +137,8 @@
             <div class="youtube-connect">
                     <p>Upload videos to your own account</p>
                     <a href={{ url_for('youtubelogin') }} id="youtubeConnectButton">
-                        <img src={{ url_for('static', filename="youtubeicon.png") }} alt="YouTube Icon">
+                        <!-- <img src={{ url_for('static', filename="youtubeicon.png") }} alt="YouTube Icon"> -->
+                        <img src="https://kidsplot.com/static/youtubeicon.png" alt="">
                     </a>
             </div>
             {% if youtubechannels %}
