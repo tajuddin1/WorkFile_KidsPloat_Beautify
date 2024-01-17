@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5Z4W55K33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q5Z4W55K33');
+</script>
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-T6ZRS2M9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsPlot.com | Story - {{ video_title }}</title>
+    <meta name="description" content= "AI kids story generator | Generate your own story  |  {{short_story}}">
+    <style>
+        :root {
+             --blue: #0377a6;
+             --white: #ffffff;
+             --black: #000000;
+         }
+ 
+         *{
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             user-select: none;
+         }
+ 
+         html{
+             scroll-behavior: smooth;
+         }
+ 
+         body {
+             font-family: 'Open Sans', sans-serif;
+             background-color: #f2f2f2;
+             margin: 0;
+             padding: 0;
+         }
+ 
+         .container{
+             width: 1300px;
+             margin: auto;
+         }
+ 
+         header {
+             padding: 10px 0;
+             background:  var(--white);
+             border: 1px solid #ddd;
+         }
+ 
+         header ul {
+             list-style: none;
+             padding: 0;
+         }
+ 
+         header ul li {
+             display: inline;
+             margin-right: 20px;
+         }
+ 
+         header a {
+             text-decoration: none;
+             color:  var(--blue);
+         }
+ 
+         ul.menu-item-wrapper {
+             list-style: none;
+             display: flex;
+             flex-direction: row;
+         }
+ 
+         a.menu-link {
+             color: var(--blue) !important;
+         }
+ 
+         .logo img {
+             max-height: 40px;
+         }
+ 
+         .menu {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             min-height: 48px;
+         }
+ 
+         .content {
+             box-sizing: border-box;
+             padding: 20px 0;
+             min-height: calc(100vh - 138px);
+         }
+ 
+         .about_author {
+             display: flex;
+             gap: 10px;
+             margin-top: 20px;
+         }
+ 
+         .author_image img {
+             width: 100%;
+             border-radius: 10px;
+             box-shadow: -3px 4px 2px 2px #ddd;
+         }
+ 
+         .author_content h2 {
+             font-size: 26px;
+             margin-bottom: 10px;
+             margin-top: 36px;
+         }
+ 
+         .author_image {
+             width: 20%;
+         }
+ 
+         .author_content {
+             width: 80%;
+         }
+ 
+         .author_content p {
+             font-size: 18px;
+             line-height: 23px;
+         }
+ 
+         h1.page-title {
+             font-size: 38px;
+             margin-bottom: 20px;
+             text-align: center;
+             color: var(--blue);
+         }
+ 
+         footer {
+             background-color: var(--blue);
+             color: var(--white);
+             text-align: center;
+             padding: 10px;
+         }
+ 
+         @media screen  and (max-width:1340px){
+             .container{
+                 width: 90%;
+                 margin: auto;
+             }
+         }
+ 
+         @media screen  and (max-width:667px){
+             .menu {
+                 flex-direction: column;
+                 row-gap: 7px;
+             }
+ 
+             h1.page-title {
+                 font-size: 30px;
+                 margin-bottom: 0px;
+                 text-align: center;
+             }
+         }
+ 
+         @media screen  and (max-width:590px){
+             .container{
+                 width: 95%;
+                 margin: auto;
+             }
+ 
+             footer {
+                 font-size: 12px;
+             }
+ 
+             .logo img {
+                 max-height: 30px;
+             }
+ 
+             h1.page-title {
+                 font-size: 26px;
+                 margin-bottom: 0px;
+                 text-align: center;
+             }
+         }
+ 
+         @media screen  and (max-width:490px){
+             .container{
+                 width: 95%;
+                 margin: auto;
+             }
+         }
+         /* body {
+             text-align: center;
+             margin: 20px;
+         } */
+         video {
+             width: 100%;
+             display: block;
+             margin: 0 auto;
+         }
+ 
+         video::-webkit-media-controls {
+             z-index: 2;
+         }
+ 
+         .video-info {
+             margin-top: 20px;
+             text-align: left;
+         }
+ 
+         .comments-section {
+             margin: 20px 0 50px;
+             padding: 0px 15px;
+             text-align: left;
+         }
+ 
+         .video-content {
+             margin-top: 30px;
+             padding: 15px;
+             background: white;
+             border-radius: 4px;
+         }
+ 
+         .video-content h1 {
+             font-size: 30px;
+             font-weight: 100;
+             color: var(--blue);
+             margin-bottom: 20px;
+         }
+ 
+         .video-info h2 {
+             margin-bottom: 10px;
+             font-size: 24px;
+         }
+ 
+         .comments-section h2 {
+             font-size: 24px;
+             margin-bottom: 20px;
+         }
+ 
+         .video-info p {
+             font-size: 18px;
+             line-height: 22px;
+         }
+         
+         .comments-section form textarea {
+             font-family: 'Open Sans', sans-serif;
+             width: 100% !important;
+             margin-bottom: 10px;
+             font-size: 16px;
+             padding: 8px 10px;
+         }
+ 
+         .comments-section form textarea:focus-visible {
+             border: 1px solid #0377a6;
+             outline: none;
+             box-shadow: 0px 0px 0px 3px #0377a669;
+         }
+ 
+         .comments-section form label {
+             font-size: 16px;
+             display: block;
+             margin-bottom: 5px;
+         }
+ 
+         input.submit-btn {
+             padding: 8px 10px;
+             font-size: 16px;
+             background: #0377a6;
+             color: #fff;
+             border: 1px solid #0075a5;
+             border-radius: 2px;
+             cursor: pointer;
+         }
+ 
+         .user-comments-wrapper {
+             display: flex;
+             flex-direction: column;
+             gap: 30px;
+             margin-bottom: 30px;
+         }
+         
+         .comments-content {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+         .user-info {
+             display: flex;
+             flex-direction: column;
+             gap: 5px;
+         }
+ 
+         .user-icon {
+             width: 30px;
+             height: 30px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background: var(--white);
+             border-radius: 50%;
+             border: 1px solid var(
+             --blue);
+         }
+ 
+         .user-icon i {
+             display: block;
+             font-size: 18px;
+             color: var(--blue);
+         }
+ 
+         .user-name {
+             font-size: 18px;
+             color: var(--black);
+         }
+ 
+         .user-name span {
+             font-size: 12px;
+             color: #7d7d7d;
+             display: inline-block;
+             margin-left: 15px;
+         }
+ 
+         .user-comments {
+             color: black;
+         }
+
+         .text-container h5 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+
+        .text-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .read_more_wrapper {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 93px;
+            text-align: center;
+        }
+
+        button.read-more-btn {
+            padding: 4px 16px;
+            background: var(--white);
+            color: var(--blue);
+            border: 1px solid var(--blue);
+            border-radius: 33px;
+            margin-top: 55px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="container">
+              <div class="menu">
+                <div class="logo_wrapper">
+                    <div class="logo">
+                        <img src="https://kidsplot.com/static/combined_logo.gif" alt="">
+                    </div>
+                </div>
+                 <ul class="menu-item-wrapper">
+                    <li><a class="menu-link" href="/">Home</a></li>
+                    <li><a class="menu-link" href="{{ url_for('about') }}">About</a></li>
+                    <li><a class="menu-link" href="#">Services</a></li>
+                    <li><a class="menu-link" href="{{ url_for('contact') }}">Contact</a></li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="video-content">
+            <h1>
+                <!-- {{ video_title }} -->
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, blanditiis.
+            </h1>
+            <video  controls autoplay controlsList="nodownload" oncontextmenu="return false;" poster="  {{ url_for('serve_thumbnail', filename=image_files) }}" alt="Thumbnail">
+                <source src="{{ url_for('protected_serve_video', filename=video_url) }}" type="video/mp4" />
+            </video>
+
+            <div class="video-info">
+                <h2>Video Story</h2>
+                <div class="text-container" style="max-height: 120px;">
+                    <h5>
+                        <!-- {{ video_description }} -->
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint placeat totam iure minima a saepe molestiae doloremque quaerat dolorum et ratione aliquam 
+                        consequuntur labore maxime atque, impedit accusamus, perferendis consequatur tempora aperiam? Cumque nobis at consequatur ad beatae molestiae earum deleniti 
+                        magnam voluptatem obcaecati aspernatur eius dolor tenetur deserunt itaque odio enim architecto, praesentium sed unde sit consequuntur voluptates! Repudiandae 
+                        provident quod, accusamus rerum ullam esse sed, blanditiis deserunt quaerat inventore nam fugit assumenda commodi similique corrupti. Distinctio eum ullam 
+                        modi quae voluptatum illum blanditiis cum architecto labore harum quisquam aliquam neque qui, laboriosam veritatis dolorem optio doloremque atque nam 
+                        repellat! Libero recusandae consequatur ipsam amet dolor ratione nulla, commodi velit illum ipsa pariatur. 
+                        <br>
+                        <br>
+                        In ea magni quas a incidunt voluptatem, facilis molestiae ipsum, dignissimos optio illum ab facere. Eligendi, maiores non tempore doloremque enim quae 
+                        accusamus repellat nulla rerum quod in, recusandae id dolores aliquam quis. Esse consectetur aspernatur, saepe minima dolor quibusdam omnis? Eius possimus 
+                        impedit totam harum nostrum inventore id nihil quo quaerat, nobis voluptates earum dolore. Veritatis vitae maiores quod! Nam et laboriosam, esse blanditiis 
+                        laudantium fugit obcaecati molestias ex rem debitis quisquam dolor, nemo est eos placeat culpa accusantium id distinctio, ratione voluptas. Omnis, sapiente.
+                    </h5>
+                    <div class="read_more_wrapper" style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgb(255, 255, 255, 0.99), rgb(255, 255, 255));">
+                        <button data-expanded="false" class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comments-section">
+            <h2>User Comments</h2>
+            <div class="user-comments-wrapper">
+                <div class="comments-content">
+                    <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="user-info">
+                        <div class="user-name">Author <span>10 days ago</span></div>
+                        <div class="user-comments">Wow very nice video 😚😍</div>
+                    </div>
+                    
+                </div>
+                <div class="comments-content">
+                    <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="user-info">
+                        <div class="user-name">John Smith <span>10 days ago</span></div>
+                        <div class="user-comments">Omg! this video was so good😍</div>
+                    </div>
+                    
+                </div>
+                <!-- Add More Comments Here -->
+            </div>
+            <form>
+                <label for="user-comment">Leave a comment:</label>
+                <textarea id="user-comment" name="user-comment" rows="2" cols="50"></textarea>
+                <input class="submit-btn" type="submit" value="Submit">
+            </form>
+            <!-- Display existing comments here if any -->
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>© 2023 kidsplot.com. All rights reserved. <a href="{{ url_for('privacy') }}" style="color: white;">Privacy Policy</a>
+                <a href="{{ url_for('termsandconditions') }}" style="color: white;">Terms and Conditions</a></p>
+            <p style="margin-top: 4px;">Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/ananthakrishnansreeraman" target="_blank" style="color: white;">Ananthakrishnan Sreeraman</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const readMoreBtns = document.querySelectorAll(".read-more-btn");
+
+            readMoreBtns.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    const textContainer = btn.parentElement.parentElement;
+                    const read_more_wrapper = textContainer.querySelector(".read_more_wrapper");
+                    const text = textContainer.querySelector(".text");
+                    const expanded = btn.getAttribute("data-expanded");
+
+                    if (expanded === "false") {
+                        textContainer.style.maxHeight = "100%";
+                        read_more_wrapper.style.backgroundImage = "unset";
+                        btn.innerHTML = "Read Less";
+                        btn.setAttribute("data-expanded", "true");
+                        btn.classList.add('expand');
+                    } else {
+                        textContainer.style.maxHeight = "120px";
+                        read_more_wrapper.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.85), rgb(255, 255, 255, 0.99), rgb(255, 255, 255))";
+                        btn.innerHTML = "Read More";
+                        btn.setAttribute("data-expanded", "false");
+                        btn.classList.remove('expand');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+    
+</html>

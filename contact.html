@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact KidsPlot</title>
+    <style>
+        :root {
+            --blue: #0377a6;
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            box-sizing: border-box;
+            padding: 20px 0;
+            min-height: calc(100vh - 108px);
+        }
+
+        .registration-container {
+            max-width: 650px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-top: 60px;
+            padding: 30px 40px;
+            background-color: #fff;
+            border: 1px solid #cccccc57;
+            border-radius: 5px;
+            box-shadow: 0 0 20px 5px #ccccccad;
+            text-align: center;
+        }
+
+        .registration-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .registration-container p {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--blue);
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label{
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100% !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .form-control:focus{
+            outline: 0;
+            border: 1px solid transparent;
+            box-shadow: 0px 0px 2px 1px var(--blue);
+        }
+
+        .submit_btn {
+            padding: 10px 50px;
+            font-size: 16px;
+            background-color: var(--blue);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container{
+            width: 1300px;
+            margin: auto;
+        }
+
+        header {
+            padding: 10px 0;
+            background:  var(--white);
+            border: 1px solid #ddd;
+        }
+
+        header ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header a {
+            text-decoration: none;
+            color:  var(--blue);
+        }
+
+        ul.menu-item-wrapper {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        a.menu-link {
+            color: var(--blue) !important;
+        }
+
+        .logo img {
+            max-height: 40px;
+        }
+
+        h1.page-title {
+            font-size: 38px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--blue);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 48px;
+        }
+
+        form.contact-form {
+            max-width: 650px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: var(--blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        @media screen  and (max-width:1340px){
+            .container{
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        @media screen  and (max-width:667px){
+            .menu {
+                flex-direction: column;
+                row-gap: 7px;
+            }
+
+            .registration-container{
+                width: 95%;
+                margin: 30px auto;
+            }
+
+            .content {
+                min-height: calc(100vh - 129px);
+            }
+
+            h1.page-title {
+                font-size: 30px;
+                margin-bottom: 0px;
+                text-align: center;
+            }
+        }
+
+        @media screen  and (max-width:590px){
+            .container{
+                width: 95%;
+                margin: auto;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+
+            .logo img {
+                max-height: 30px;
+            }
+
+            h1.page-title {
+                font-size: 26px;
+                margin-bottom: 0px;
+                text-align: center;
+            }
+
+            .content {
+                min-height: calc(100vh - 115px);
+            }
+        }
+
+        @media screen  and (max-width:490px){
+            .container{
+                width: 95%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="container">
+              <div class="menu">
+                <div class="logo_wrapper">
+                    <div class="logo">
+                        <img src="https://kidsplot.com/static/combined_logo.gif" alt="">
+                    </div>
+                </div>
+                 <ul class="menu-item-wrapper">
+                    <li><a class="menu-link" href="/">Home</a></li>
+                    <li><a class="menu-link" href="{{ url_for('about') }}">About</a></li>
+                    <li><a class="menu-link" href="#">Services</a></li>
+                    <li><a class="menu-link" href="{{ url_for('contact') }}">Contact</a></li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h1 class="page-title">Contact KidsPlot</h1>
+            <form class="contact-form" action="/contact" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input class="form-control" type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Your Phone:</label>
+                    <input class="form-control" type="phone" id="phone" name="phone" required>
+                </div>
+                 
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                </div>
+      
+                <button class="submit_btn" type="submit" id="send-message" action = '/contact' >Send Message</button> <p> {{message}}</p>
+              </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 kidsplot.com. All rights reserved. <a href="{{ url_for('privacy') }}" style="color: white;">Privacy Policy</a>
+            <a href="{{ url_for('termsandconditions') }}" style="color: white;">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>

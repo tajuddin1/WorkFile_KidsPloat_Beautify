@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About KidsPlot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #0377a6;
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 1300px;
+            margin: auto;
+        }
+        header {
+            padding: 10px 0;
+            background:  var(--white);
+            border: 1px solid #ddd;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+        }
+        header ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header a {
+            text-decoration: none;
+            color:  var(--blue);
+        }
+        ul.menu-item-wrapper {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        a.menu-link {
+            color: var(--blue) !important;
+        }
+
+        .logo img {
+            max-height: 40px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 48px;
+        }
+
+        .content {
+            box-sizing: border-box;
+            padding: 20px 0;
+            min-height: calc(100vh - 138px);
+        }
+        .about_author {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .author_image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: -3px 4px 2px 2px #ddd;
+        }
+
+        .author_content h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            margin-top: 36px;
+        }
+
+        .author_image {
+            width: 20%;
+        }
+
+        .author_content {
+            width: 80%;
+        }
+
+        .author_content p {
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        h1.page-title {
+            font-size: 38px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--blue);
+        }
+
+        footer {
+            background-color: var(--blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media screen  and (max-width:1340px){
+            .container{
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        @media screen  and (max-width:667px){
+            .menu {
+                flex-direction: column;
+                row-gap: 7px;
+            }
+            h1.page-title {
+                font-size: 30px;
+                margin-bottom: 0px;
+                text-align: center;
+            }
+        }
+
+        @media screen  and (max-width:590px){
+            .container{
+                width: 95%;
+                margin: auto;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+
+            .logo img {
+                max-height: 30px;
+            }
+
+            h1.page-title {
+                font-size: 26px;
+                margin-bottom: 0px;
+                text-align: center;
+            }
+        }
+
+        @media screen  and (max-width:490px){
+            .container{
+                width: 95%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="container">
+              <div class="menu">
+                <div class="logo_wrapper">
+                    <div class="logo">
+                        <img src="https://kidsplot.com/static/combined_logo.gif" alt="">
+                    </div>
+                </div>
+                 <ul class="menu-item-wrapper">
+                    <li><a class="menu-link" href="/">Home</a></li>
+                    <li><a class="menu-link" href="{{ url_for('about') }}">About</a></li>
+                    <li><a class="menu-link" href="#">Services</a></li>
+                    <li><a class="menu-link" href="{{ url_for('contact') }}">Contact</a></li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+     </header>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="page-title">About KidsPlot</h1>
+    
+            
+    
+            <div class="about_author">
+                <div class="author_content">
+                    <h2 style="margin-top: 0;">Your Guide: Anantha Sreeraman</h2>
+                    <p>Hello there! I'm Anantha Sreeraman, your friendly neighborhood dad and the brain behind KidsPlot. By day, I'm a mild-mannered software engineer, but by night, I transform into the legendary storyteller – the one who battles bedtime monsters with tales of epic adventures!</p>
+                </div>
+                <div class="author_image">
+                    <img src="https://kidsplot.com/static/about.jpg" alt="Anantha Sreeraman and Nivaan Sreeraman">
+                </div>
+            </div>
+
+            <h2>Inspiration Behind KidsPlot</h2>
+            <p>Picture this: every night, my son Nivaan Sreeraman challenges me to a duel of wits at bedtime. I must conjure up a story that rivals the excitement of his favorite superhero adventures. But, alas, even superheroes run out of plot twists. And that's where KidsPlot comes in – my secret weapon to never-ending bedtime tales!</p>
+    
+            <h2>My Mission</h2>
+            <p>At KidsPlot, I'm on a mission to conquer bedtime boredom, one hilarious story at a time. My platform is like a superhero sidekick, empowering kids to become the authors of their own bedtime sagas. Join me in the battle against yawns and unleash the creative superhero in your child!</p>
+            <br>
+            <p>Picture this: a world where bedtime isn't a battle but a burst of uncontrollable laughter. My platform is more than just stories; it's a laughter laboratory, a chuckle chamber, and a joke juggernaut. I'm not just defeating yawns; I'm turning them into yodels of joy!</p>
+            <br>
+            <p>Join me in the quest to banish serious faces and replace them with smiles that stretch from ear to ear. Together, we'll make bedtime the highlight of the day, with tales so hilarious that even the Sandman can't resist joining the laughter party!</p>
+        
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 kidsplot.com. All rights reserved. <a href="{{ url_for('privacy') }}" style="color: white;">Privacy Policy</a>
+                <a href="{{ url_for('termsandconditions') }}" style="color: white;">Terms and Conditions</a></p>
+            <p style="margin-top: 4px;">Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/ananthakrishnansreeraman" target="_blank" style="color: white;">Ananthakrishnan Sreeraman</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+    
