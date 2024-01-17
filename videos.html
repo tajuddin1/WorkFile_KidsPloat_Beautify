@@ -31,8 +31,12 @@
          *{
              margin: 0;
              padding: 0;
-             box-sizing: border-box;
-             user-select: none;
+             -webkit-box-sizing: border-box;
+                     box-sizing: border-box;
+             -webkit-user-select: none;
+                -moz-user-select: none;
+                 -ms-user-select: none;
+                     user-select: none;
          }
  
          html{
@@ -74,8 +78,13 @@
  
          ul.menu-item-wrapper {
              list-style: none;
+             display: -webkit-box;
+             display: -ms-flexbox;
              display: flex;
-             flex-direction: row;
+             -webkit-box-orient: horizontal;
+             -webkit-box-direction: normal;
+                 -ms-flex-direction: row;
+                     flex-direction: row;
          }
  
          a.menu-link {
@@ -87,19 +96,28 @@
          }
  
          .menu {
+             display: -webkit-box;
+             display: -ms-flexbox;
              display: flex;
-             justify-content: space-between;
-             align-items: center;
+             -webkit-box-pack: justify;
+                 -ms-flex-pack: justify;
+                     justify-content: space-between;
+             -webkit-box-align: center;
+                 -ms-flex-align: center;
+                     align-items: center;
              min-height: 48px;
          }
  
          .content {
-             box-sizing: border-box;
+             -webkit-box-sizing: border-box;
+                     box-sizing: border-box;
              padding: 20px 0;
              min-height: calc(100vh - 138px);
          }
  
          .about_author {
+             display: -webkit-box;
+             display: -ms-flexbox;
              display: flex;
              gap: 10px;
              margin-top: 20px;
@@ -108,7 +126,8 @@
          .author_image img {
              width: 100%;
              border-radius: 10px;
-             box-shadow: -3px 4px 2px 2px #ddd;
+             -webkit-box-shadow: -3px 4px 2px 2px #ddd;
+                     box-shadow: -3px 4px 2px 2px #ddd;
          }
  
          .author_content h2 {
@@ -153,7 +172,10 @@
  
          @media screen  and (max-width:667px){
              .menu {
-                 flex-direction: column;
+                 -webkit-box-orient: vertical;
+                 -webkit-box-direction: normal;
+                     -ms-flex-direction: column;
+                         flex-direction: column;
                  row-gap: 7px;
              }
  
@@ -251,12 +273,15 @@
              margin-bottom: 10px;
              font-size: 16px;
              padding: 8px 10px;
+             min-height: 40px;
          }
  
          .comments-section form textarea:focus-visible {
              border: 1px solid #0377a6;
              outline: none;
-             box-shadow: 0px 0px 0px 3px #0377a669;
+             -webkit-box-shadow: 0px 0px 0px 3px #0377a669;
+                     box-shadow: 0px 0px 0px 3px #0377a669;
+
          }
  
          .comments-section form label {
@@ -276,33 +301,53 @@
          }
  
          .user-comments-wrapper {
+             display: -webkit-box;
+             display: -ms-flexbox;
              display: flex;
-             flex-direction: column;
+             -webkit-box-orient: vertical;
+             -webkit-box-direction: normal;
+                 -ms-flex-direction: column;
+                     flex-direction: column;
              gap: 30px;
              margin-bottom: 30px;
          }
          
          .comments-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
             gap: 10px;
         }
          .user-info {
+             display: -webkit-box;
+             display: -ms-flexbox;
              display: flex;
-             flex-direction: column;
+             -webkit-box-orient: vertical;
+             -webkit-box-direction: normal;
+                 -ms-flex-direction: column;
+                     flex-direction: column;
              gap: 5px;
          }
  
          .user-icon {
              width: 30px;
              height: 30px;
+             display: -webkit-box;
+             display: -ms-flexbox;
              display: flex;
-             align-items: center;
-             justify-content: center;
+             -webkit-box-align: center;
+                 -ms-flex-align: center;
+                     align-items: center;
+             -webkit-box-pack: center;
+                 -ms-flex-pack: center;
+                     justify-content: center;
              background: var(--white);
              border-radius: 50%;
-             border: 1px solid var(
-             --blue);
+             border: 1px solid var(--blue);
          }
  
          .user-icon i {
